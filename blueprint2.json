@@ -1,0 +1,65 @@
+{
+	"bodies": [
+		{
+			"childs": [
+				{
+					"bounds": {
+						"x": 5,
+						"y": 7,
+						"z": 1
+					},
+					"color": "8D8F89",
+					"pos": {
+						"x": -15,
+						"y": 4,
+						"z": 2
+					},
+					"shapeId": "a6c6ce30-dd47-4587-b475-085d55c6a3b4",
+					"xaxis": 1,
+					"zaxis": 3
+				},
+				{
+					"color": "D02525",
+					"controller": {
+						"active": false,
+						"controllers": [
+							{
+								"id": 48818
+							}
+						],
+						"id": 48817,
+						"joints": null,
+						"mode": 0
+					},
+					"pos": {
+						"x": -13,
+						"y": 6,
+						"z": 3
+					},
+					"shapeId": "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis": 1,
+					"zaxis": -2
+				},
+				{
+					"color": "19E753",
+					"controller": {
+						"active": false,
+						"controllers": null,
+						"id": 48818,
+						"joints": null,
+						"mode": 0
+					},
+					"pos": {
+						"x": -13,
+						"y": 9,
+						"z": 3
+					},
+					"shapeId": "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis": 1,
+					"zaxis": -2
+				}
+			]
+		}
+	],
+	"version": 4
+}
