@@ -3,8 +3,8 @@ import json
 import pygame
 
 ##### CONFIG #####
-window_size = (1280, 720)
-tile_size = 32
+window_size = (1280, 950)
+tile_size = 40
 tile_margin = 5
 
 position_x = 0
@@ -250,6 +250,9 @@ while True:
 			pygame.draw.circle(window, (0, 200, 0), end_pos, 8)
 
 		draw_connections = False
+
+		# draw start circle
+		pygame.draw.circle(window, (255, 50, 0), (blocks[draw_connections_block_idx][1] * tile_size - position_x + half_tile_size, blocks[draw_connections_block_idx][2] * tile_size - position_y + half_tile_size), 8)
 
 	# update
 	pygame.display.update()
