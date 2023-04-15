@@ -230,6 +230,8 @@ while True:
 				draw_connections_block_idx = block_idx
 				draw_connections_max_idx = len(block[3]) - 1
 
+	# draw cursor hovered tile outline
+	pygame.draw.rect(window, (255, 255, 255), (cursor_tile_x * tile_size - position_x, cursor_tile_y * tile_size - position_y, tile_size, tile_size), 1)
 
 	if draw_connections:
 		for controller_idx, controller in enumerate(blocks[draw_connections_block_idx][3]):
@@ -248,10 +250,6 @@ while True:
 			pygame.draw.circle(window, (0, 200, 0), end_pos, 8)
 
 		draw_connections = False
-
-
-	# draw cursor hovered tile outline
-	pygame.draw.rect(window, (255, 255, 255), (cursor_tile_x * tile_size - position_x, cursor_tile_y * tile_size - position_y, tile_size, tile_size), 1)
 
 	# update
 	pygame.display.update()
