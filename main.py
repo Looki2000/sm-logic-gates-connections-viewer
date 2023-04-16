@@ -50,21 +50,40 @@ for block in data:
 			#print(f"{shapeid_to_name(block['shapeId'])} at {block['pos']}")
 
 
-			if block["zaxis"] == -1:
-				offset_x = 1
-				offset_y = 1
+			# logic gate
+			if block["shapeId"] == logic_gate_shapeid:
+				if block["xaxis"] == -1:
+					offset_x = 0
+					offset_y = 1
 
-			elif block["zaxis"] == 1:
-				offset_x = 0
-				offset_y = 0
+				elif block["xaxis"] == 1:
+					offset_x = 1
+					offset_y = 0
 
-			elif block["zaxis"] == -2:
-				offset_x = 1
-				offset_y = 0
+				elif block["xaxis"] == -2:
+					offset_x = 1
+					offset_y = 1
 
-			elif block["zaxis"] == 2:
-				offset_x = 0
-				offset_y = 1
+				elif block["xaxis"] == 2:
+					offset_x = 0
+					offset_y = 0
+			# else timer
+			else:
+				if block["xaxis"] == -1:
+					offset_x = 1 # 0 for logic gate
+					offset_y = 1
+
+				elif block["xaxis"] == 1:
+					offset_x = 0 # 1 for logic gate
+					offset_y = 0
+
+				elif block["xaxis"] == -2:
+					offset_x = 1
+					offset_y = 0 # 1 for logic gate
+
+				elif block["xaxis"] == 2:
+					offset_x = 0
+					offset_y = 1 # 0 for logic gate
 
 
 			pos_x = -block["pos"]["y"] + offset_x
