@@ -3,7 +3,7 @@ import json
 import pygame
 
 ##### CONFIG #####
-window_size = (1280, 950)
+window_size = (1280, 720)
 tile_size = 40
 tile_margin = 5
 
