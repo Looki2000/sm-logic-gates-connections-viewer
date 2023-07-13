@@ -3,7 +3,7 @@ import json
 import pygame
 
 ##### CONFIG #####
-window_size = (1280, 720)
+window_size = ((1280, 720), (1280, 950))[0]
 tile_size = 40
 tile_margin = 5
 
@@ -177,6 +177,19 @@ while True:
 		if event.type == pygame.QUIT:
 			pygame.quit()
 			quit()
+
+		# arrow keys
+		elif event.type == pygame.KEYDOWN:
+			# left
+			if event.key == pygame.K_LEFT:
+				cursor_tile_x -= 1
+			if event.key == pygame.K_RIGHT:
+				cursor_tile_x += 1
+			if event.key == pygame.K_UP:
+				cursor_tile_y -= 1
+			if event.key == pygame.K_DOWN:
+				cursor_tile_y += 1
+				
 
 	
 
